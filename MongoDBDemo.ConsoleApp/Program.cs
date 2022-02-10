@@ -7,7 +7,7 @@ using MongoDBDemo.ConsoleApp.Models;
 //BsonSerializer.RegisterSerializer(serializer);
 BsonSerializer.RegisterSerializer(typeof(DateTime), new BsonUtcDateTimeSerializer());
 var dbName = "data_center";
-var connectionString = "mongodb+srv://rector:ROvUDRfP4ZBqW5z4@cluster0.inudy.azure.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+var connectionString = "MONGODB_ATLAS_URL";
 var client = new MongoClient(connectionString);
 
 var databases = client.ListDatabaseNames().ToList();
